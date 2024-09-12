@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="boot3-04-web" />
+        <module name="boot3-09-swagger" />
+        <module name="boot3-02-ioc" />
+        <module name="boot3-06-features" />
+        <module name="boot3-01-demo" />
+        <module name="mybatis-01-example" />
+        <module name="boot3-05-ssm" />
+        <module name="boot3-10-reactor" />
+        <module name="boot3-07-core" />
+        <module name="mybatis-02-plus" />
+        <module name="boot3-03-logger" />
+        <module name="boot3-08-redis" />
+        <module name="boot3-11-r2dbc" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="boot3-01-demo" options="-parameters" />
+      <module name="boot3-02-ioc" options="-parameters" />
+      <module name="boot3-03-logger" options="-parameters" />
+      <module name="boot3-04-web" options="-parameters" />
+      <module name="boot3-05-ssm" options="-parameters" />
+      <module name="boot3-06-features" options="-parameters" />
+      <module name="boot3-07-core" options="-parameters" />
+      <module name="boot3-08-redis" options="-parameters" />
+      <module name="boot3-09-swagger" options="-parameters" />
+      <module name="boot3-10-reactor" options="-parameters" />
+      <module name="boot3-11-r2dbc" options="-parameters" />
+      <module name="mybatis-01-example" options="-parameters" />
+      <module name="mybatis-02-plus" options="-parameters" />
+    </option>
+  </component>
+</project>

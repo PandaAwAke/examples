@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>这是标题</title>
+</head>
+<body>
+<h1>这是h1标题</h1>
+
+<div id="app" style="width: 500px; height: 300px; background-color: gainsboro">
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script>
+    const http = axios.create({
+        baseURL: 'http://localhost:8080/',
+        timeout: 10000,
+        responseType: 'stream',
+        onDownloadProgress: function (progressEvent) {
+            // console.log("progressEvent->", progressEvent);
+            document.getElementById("app").innerHTML =
+                progressEvent.event.currentTarget.responseText
+        }
+    });
+
+    http.get('/sse2')
+        .then(function (response) {
+            console.log(response);
+        })
+</script>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/boot3-01-demo/pom.xml" />
+        <option value="$PROJECT_DIR$/boot3-02-ioc/pom.xml" />
+        <option value="$PROJECT_DIR$/boot3-03-logger/pom.xml" />
+        <option value="$PROJECT_DIR$/boot3-04-web/pom.xml" />
+        <option value="$PROJECT_DIR$/boot3-05-ssm/pom.xml" />
+        <option value="$PROJECT_DIR$/boot3-06-features/pom.xml" />
+        <option value="$PROJECT_DIR$/boot3-07-core/pom.xml" />
+        <option value="$PROJECT_DIR$/boot3-08-redis/pom.xml" />
+        <option value="$PROJECT_DIR$/boot3-09-swagger/pom.xml" />
+        <option value="$PROJECT_DIR$/boot3-10-reactor/pom.xml" />
+        <option value="$PROJECT_DIR$/boot3-11-r2dbc/pom.xml" />
+        <option value="$PROJECT_DIR$/mybatis-01-example/pom.xml" />
+        <option value="$PROJECT_DIR$/mybatis-02-plus/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" project-jdk-name="22" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="org.example.mybatis.mapper.UserMapper">
+
+  <resultMap id="userResultMap" type="UserEntity">
+    <result column="company_name" property="companyName" />
+  </resultMap>
+
+<!--  <select id="selectAll" resultMap="userResultMap">-->
+<!--    select * from tb_user;-->
+<!--  </select>-->
+  <select id="selectAll" resultMap="userResultMap">
+    select * from tb_user;
+  </select>
+  <select id="selectById" resultType="org.example.mybatis.entity.UserEntity">
+    select * from tb_user where id = #{id};
+  </select>
+
+
+  <insert id="addUser" useGeneratedKeys="true" keyProperty="id">
+    insert into tb_user(username, password, gender, addr, company_name)
+    values (#{username}, #{password}, #{gender}, #{addr}, #{companyName});
+  </insert>
+
+</mapper>
