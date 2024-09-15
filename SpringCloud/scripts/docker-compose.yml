@@ -1,0 +1,32 @@
+version: '3.8'
+
+services:
+  mysql:
+    image: mysql:8.0.26
+    container_name: mysql
+    ports:
+      - "3306:3306"
+    restart: always
+    volumes:
+      - E:\workspace\mysql\data:/var/lib/mysql
+      - E:\workspace\mysql\log:/var/log/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: 123456
+    networks:
+      - my-net
+
+  nacos:
+    image: nacos/nacos-server:v2.4.2-slim
+    container_name: nacos
+    env_file: nacos/custom.env
+    ports:
+      - "8848:8848"
+      - "9848:9848"
+      - "9849:9849"
+    restart: always
+    networks:
+      - my-net
+
+networks:
+  my-net:
+    driver: bridge
