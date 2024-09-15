@@ -1,4 +1,5 @@
-package com.pandaawake.common.config;
+package com.pandaawake.cart.config;
+
 
 import io.swagger.v3.oas.models.OpenAPI;
 import io.swagger.v3.oas.models.info.Info;
@@ -12,7 +13,7 @@ public class OpenAPIConfig {
     @Bean
     public OpenAPI customOpenAPI() {
         return new OpenAPI().info(new Info()
-                                .title("黑马商城系统API")
+                                .title("黑马商城购物车接口API")
                                 .version("1.0")
                                 .description("这是一个描述")
                                 .termsOfService("http://doc.xiaominfo.com")

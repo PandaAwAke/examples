@@ -1,4 +1,4 @@
-package com.pandaawake.item;
+package com.pandaawake.cart;
 
 
 import org.mybatis.spring.annotation.MapperScan;
@@ -6,11 +6,11 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-@MapperScan("com.pandaawake.item.mapper")
-public class ItemApplication {
+@MapperScan("com.pandaawake.cart.mapper")
+public class CartApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(ItemApplication.class, args);
+        SpringApplication.run(CartApplication.class, args);
     }
 
 }

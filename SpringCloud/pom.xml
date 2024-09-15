@@ -11,6 +11,7 @@
     <modules>
         <module>item-service</module>
         <module>common</module>
+        <module>cart-service</module>
     </modules>
 
     <parent>
