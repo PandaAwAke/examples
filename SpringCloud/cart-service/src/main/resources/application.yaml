@@ -16,6 +16,9 @@ spring:
     nacos:
       discovery:
         server-addr: localhost:8848
+    openfeign:
+      okhttp:
+        enabled: true
 
 mybatis-plus:
   configuration:

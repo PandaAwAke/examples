@@ -1,10 +1,10 @@
 package com.pandaawake.cart.service.impl;
 
 import cn.hutool.core.collection.CollUtil;
-import cn.hutool.core.util.RandomUtil;
 import cn.hutool.core.util.StrUtil;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.pandaawake.cart.client.ItemClient;
 import com.pandaawake.cart.domain.dto.CartFormDTO;
 import com.pandaawake.cart.domain.dto.ItemDTO;
 import com.pandaawake.cart.domain.po.Cart;
@@ -16,15 +16,8 @@ import com.pandaawake.common.utils.BeanUtils;
 import com.pandaawake.common.utils.CollUtils;
 import com.pandaawake.common.utils.UserContext;
 import lombok.RequiredArgsConstructor;
-import org.springframework.cloud.client.ServiceInstance;
-import org.springframework.cloud.client.discovery.DiscoveryClient;
-import org.springframework.core.ParameterizedTypeReference;
-import org.springframework.http.HttpMethod;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
-import org.springframework.web.client.RestTemplate;
 
-import java.net.URI;
 import java.util.Collection;
 import java.util.List;
 import java.util.Map;
@@ -47,9 +40,7 @@ public class CartServiceImpl extends ServiceImpl<CartMapper, Cart> implements IC
      * 问题 2：UserContext 需要登录拦截器配合，目前不能使用
      */
 
-    private final DiscoveryClient discoveryClient;
-
-    private final RestTemplate restTemplate;
+    private final ItemClient itemClient;
 
 
     @Override
@@ -99,25 +90,10 @@ public class CartServiceImpl extends ServiceImpl<CartMapper, Cart> implements IC
 
     private void handleCartItems(List<CartVO> vos) {
         // 服务发现
-        List<ServiceInstance> instances = discoveryClient.getInstances("item-service");
-        if (CollUtil.isEmpty(instances)) {
-            return;
-        }
-        ServiceInstance instance = instances.get(RandomUtil.randomInt(instances.size()));
-        URI uri = instance.getUri();
-
         Set<Long> itemIds = vos.stream().map(CartVO::getItemId).collect(Collectors.toSet());
 
-        ResponseEntity<List<ItemDTO>> response = restTemplate.exchange(
-                uri + "/items?ids={ids}", HttpMethod.GET, null,
-                new ParameterizedTypeReference<List<ItemDTO>>() {},
-                Map.of("ids", CollUtil.join(itemIds, ",")));
+        List<ItemDTO> items = itemClient.queryItemByIds(itemIds);
 
-        if (!response.getStatusCode().is2xxSuccessful()) {
-            return;
-        }
-
-        List<ItemDTO> items = response.getBody();
         if (CollUtil.isEmpty(items)) {
             return;
         }
