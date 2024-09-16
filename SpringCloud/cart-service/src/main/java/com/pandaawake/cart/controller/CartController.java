@@ -12,6 +12,7 @@ import lombok.RequiredArgsConstructor;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Collection;
 import java.util.List;
 
 @Tag(name = "购物车相关接口")
@@ -44,10 +45,11 @@ public class CartController {
     public List<CartVO> queryMyCarts(){
         return cartService.queryMyCarts();
     }
+
     @Operation(summary = "批量删除购物车中商品")
     @Parameter(name = "ids", description = "购物车条目id集合")
     @DeleteMapping
-    public void deleteCartItemByIds(@RequestParam("ids") List<Long> ids){
+    public void deleteCartItemByIds(@RequestParam("ids") Collection<Long> ids){
         cartService.removeByItemIds(ids);
     }
 }

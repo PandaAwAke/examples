@@ -2,11 +2,11 @@ package com.pandaawake.item.controller;
 
 
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.pandaawake.api.dto.ItemDTO;
+import com.pandaawake.api.dto.OrderDetailDTO;
 import com.pandaawake.common.domain.PageDTO;
 import com.pandaawake.common.domain.PageQuery;
 import com.pandaawake.common.utils.BeanUtils;
-import com.pandaawake.item.domain.dto.ItemDTO;
-import com.pandaawake.item.domain.dto.OrderDetailDTO;
 import com.pandaawake.item.domain.po.Item;
 import com.pandaawake.item.service.IItemService;
 import io.swagger.v3.oas.annotations.Operation;

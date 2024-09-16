@@ -1,10 +1,10 @@
 package com.pandaawake.item.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.pandaawake.api.dto.ItemDTO;
+import com.pandaawake.api.dto.OrderDetailDTO;
 import com.pandaawake.common.exception.BizIllegalException;
 import com.pandaawake.common.utils.BeanUtils;
-import com.pandaawake.item.domain.dto.ItemDTO;
-import com.pandaawake.item.domain.dto.OrderDetailDTO;
 import com.pandaawake.item.domain.po.Item;
 import com.pandaawake.item.mapper.ItemMapper;
 import com.pandaawake.item.service.IItemService;

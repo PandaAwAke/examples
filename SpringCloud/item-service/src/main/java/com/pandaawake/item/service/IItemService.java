@@ -1,8 +1,8 @@
 package com.pandaawake.item.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.pandaawake.item.domain.dto.ItemDTO;
-import com.pandaawake.item.domain.dto.OrderDetailDTO;
+import com.pandaawake.api.dto.ItemDTO;
+import com.pandaawake.api.dto.OrderDetailDTO;
 import com.pandaawake.item.domain.po.Item;
 
 import java.util.Collection;

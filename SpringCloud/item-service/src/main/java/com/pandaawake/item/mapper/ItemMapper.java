@@ -1,7 +1,7 @@
 package com.pandaawake.item.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.pandaawake.item.domain.dto.OrderDetailDTO;
+import com.pandaawake.api.dto.OrderDetailDTO;
 import com.pandaawake.item.domain.po.Item;
 import org.apache.ibatis.annotations.Update;
 
