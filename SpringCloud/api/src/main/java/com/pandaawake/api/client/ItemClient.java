@@ -1,7 +1,7 @@
-package com.pandaawake.cart.client;
+package com.pandaawake.api.client;
 
 
-import com.pandaawake.cart.domain.dto.ItemDTO;
+import com.pandaawake.api.dto.ItemDTO;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;

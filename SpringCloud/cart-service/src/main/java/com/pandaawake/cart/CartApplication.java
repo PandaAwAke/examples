@@ -8,7 +8,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 
 @SpringBootApplication
 @MapperScan("com.pandaawake.cart.mapper")
-@EnableFeignClients
+@EnableFeignClients(basePackages = "com.pandaawake.api.client")
 public class CartApplication {
 
     public static void main(String[] args) {

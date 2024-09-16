@@ -1,4 +1,4 @@
-package com.pandaawake.cart.domain.dto;
+package com.pandaawake.api.dto;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;

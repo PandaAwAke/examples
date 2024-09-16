@@ -12,6 +12,7 @@
         <module>item-service</module>
         <module>common</module>
         <module>cart-service</module>
+        <module>api</module>
     </modules>
 
     <parent>
