@@ -25,7 +25,7 @@ public class ItemController {
     private final IItemService itemService;
 
     @Operation(summary = "分页查询商品")
-    @GetMapping("/page")
+    @GetMapping(value = "/page", produces = "application/json")
     public PageDTO<ItemDTO> queryItemByPage(PageQuery query) {
         // 1.分页查询
         Page<Item> result = itemService.page(query.toMpPage("update_time", false));

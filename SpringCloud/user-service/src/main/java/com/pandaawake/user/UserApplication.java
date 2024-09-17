@@ -6,7 +6,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages = "com.pandaawake")
 @MapperScan("com.pandaawake.user.mapper")
 @EnableFeignClients(basePackages = "com.pandaawake.api.client")
 public class UserApplication {

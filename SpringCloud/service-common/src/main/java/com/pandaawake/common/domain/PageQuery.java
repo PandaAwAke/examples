@@ -16,14 +16,18 @@ import lombok.experimental.Accessors;
 public class PageQuery {
     public static final Integer DEFAULT_PAGE_SIZE = 20;
     public static final Integer DEFAULT_PAGE_NUM = 1;
+
     @Schema(description = "页码")
     @Min(value = 1, message = "页码不能小于1")
     private Integer pageNo = DEFAULT_PAGE_NUM;
+
     @Schema(description = "页码")
     @Min(value = 1, message = "每页查询数量不能小于1")
     private Integer pageSize = DEFAULT_PAGE_SIZE;
+
     @Schema(description = "是否升序")
     private Boolean isAsc = true;
+
     @Schema(description = "排序方式")
     private String sortBy;
 

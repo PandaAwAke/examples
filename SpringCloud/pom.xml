@@ -10,12 +10,13 @@
     <packaging>pom</packaging>
     <modules>
         <module>item-service</module>
-        <module>common</module>
+        <module>service-common</module>
         <module>cart-service</module>
-        <module>api</module>
+        <module>service-api</module>
         <module>user-service</module>
         <module>trade-service</module>
         <module>pay-service</module>
+        <module>service-gateway</module>
     </modules>
 
     <parent>

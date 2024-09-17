@@ -41,7 +41,7 @@ public class CartController {
     }
 
     @Operation(summary = "查询购物车列表")
-    @GetMapping
+    @GetMapping(produces = "application/json")
     public List<CartVO> queryMyCarts(){
         return cartService.queryMyCarts();
     }
