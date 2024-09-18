@@ -34,12 +34,6 @@ import java.util.stream.Collectors;
 @RequiredArgsConstructor
 public class CartServiceImpl extends ServiceImpl<CartMapper, Cart> implements ICartService {
 
-    /**
-     * TODO
-     * 问题 1：微服务调用 (已解决)
-     * 问题 2：UserContext 需要登录拦截器配合，目前不能使用
-     */
-
     private final ItemClient itemClient;
 
 
@@ -69,10 +63,9 @@ public class CartServiceImpl extends ServiceImpl<CartMapper, Cart> implements IC
     @Override
     public List<CartVO> queryMyCarts() {
         // 1.查询我的购物车列表
-//        List<Cart> carts = lambdaQuery().eq(Cart::getUserId, UserContext.getUser()).list();
+        List<Cart> carts = lambdaQuery().eq(Cart::getUserId, UserContext.getUser()).list();
 
-        // TODO: Change this
-        List<Cart> carts = lambdaQuery().eq(Cart::getUserId, 1L).list();
+//        List<Cart> carts = lambdaQuery().eq(Cart::getUserId, 1L).list();
 
         if (CollUtils.isEmpty(carts)) {
             return CollUtils.emptyList();

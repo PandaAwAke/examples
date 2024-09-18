@@ -59,9 +59,14 @@ public class AuthGlobalFilter implements GlobalFilter, Ordered {
         }
 
         // 传递用户信息
-        System.out.println("userId = " + userId);
+        // 网关将 userId 保存到请求头，然后转发给微服务
+        // 微服务用 @RequestHeader(value = "user-info", required = false) 可以直接取到
+        String userInfo = userId.toString();
+        ServerWebExchange newExchange = exchange.mutate()
+                .request(builder -> builder.header("user-info", userInfo))
+                .build();
 
-        return chain.filter(exchange);  // 放行
+        return chain.filter(newExchange);  // 放行
     }
 
     @Override

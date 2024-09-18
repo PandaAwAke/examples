@@ -38,6 +38,9 @@ services:
     volumes:
       - ./nginx/conf/nginx.conf:/etc/nginx/nginx.conf:ro
       - ./nginx/html:/usr/share/nginx/html
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
 
 networks:
   my-net:

@@ -5,7 +5,7 @@ import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@SpringBootApplication(scanBasePackages = "com.pandaawake")
+@SpringBootApplication
 @MapperScan("com.pandaawake.item.mapper")
 public class ItemApplication {
 
