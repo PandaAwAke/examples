@@ -1,4 +1,4 @@
-package com.pandaawake.user.config;
+package com.pandaawake.gateway.config;
 
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
