@@ -2,7 +2,6 @@ package com.pandaawake.user.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.pandaawake.common.exception.BadRequestException;
-import com.pandaawake.common.exception.BizIllegalException;
 import com.pandaawake.common.exception.ForbiddenException;
 import com.pandaawake.common.utils.UserContext;
 import com.pandaawake.user.config.JwtProperties;
@@ -65,12 +64,12 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
     @Override
     public void deductMoney(String pw, Integer totalFee) {
         log.info("开始扣款");
-        // 1.校验密码
-        User user = getById(UserContext.getUser());
-        if(user == null || !passwordEncoder.matches(pw, user.getPassword())){
-            // 密码错误
-            throw new BizIllegalException("用户密码错误");
-        }
+//        // 1.校验密码
+//        User user = getById(UserContext.getUser());
+//        if(user == null || !passwordEncoder.matches(pw, user.getPassword())){
+//            // 密码错误
+//            throw new BizIllegalException("用户密码错误");
+//        }
 
         // 2.尝试扣款
         try {
