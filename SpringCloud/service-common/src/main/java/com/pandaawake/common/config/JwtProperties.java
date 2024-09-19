@@ -1,4 +1,4 @@
-package com.pandaawake.user.config;
+package com.pandaawake.common.config;
 
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;

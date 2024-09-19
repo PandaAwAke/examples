@@ -20,6 +20,9 @@ spring:
       okhttp:
         enabled: true
 
+  config:
+    import: classpath:common.yaml
+
 mybatis-plus:
   configuration:
     default-enum-type-handler: com.baomidou.mybatisplus.core.handlers.MybatisEnumTypeHandler
@@ -40,16 +43,3 @@ knife4j:
   enable: true
   setting:
     language: zh_cn
-
-hm:
-  jwt:    # JWT 秘钥相关
-    location: classpath:hmall.jks
-    alias: hmall
-    password: hmall123
-    tokenTTL: 30m
-  auth:   # 登录拦截
-    excludePaths:
-      - /search/**
-      - /users/login
-      - /items/**
-      - /hi

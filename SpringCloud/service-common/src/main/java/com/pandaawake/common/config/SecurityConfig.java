@@ -1,5 +1,7 @@
-package com.pandaawake.gateway.config;
+package com.pandaawake.common.config;
 
+import com.pandaawake.common.utils.JwtTool;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -30,4 +32,10 @@ public class SecurityConfig {
                 properties.getAlias(),
                 properties.getPassword().toCharArray());
     }
+
+    @Bean
+    public JwtTool jwtTool(@Autowired KeyPair keyPair) {
+        return new JwtTool(keyPair);
+    }
+
 }

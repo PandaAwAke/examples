@@ -3,8 +3,8 @@ package com.pandaawake.gateway.filters;
 
 import cn.hutool.core.collection.CollUtil;
 import com.pandaawake.common.exception.UnauthorizedException;
+import com.pandaawake.common.utils.JwtTool;
 import com.pandaawake.gateway.config.AuthProperties;
-import com.pandaawake.gateway.utils.JwtTool;
 import lombok.RequiredArgsConstructor;
 import org.springframework.cloud.gateway.filter.GatewayFilterChain;
 import org.springframework.cloud.gateway.filter.GlobalFilter;

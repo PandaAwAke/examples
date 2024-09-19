@@ -1,4 +1,4 @@
-package com.pandaawake.gateway.utils;
+package com.pandaawake.common.utils;
 
 import cn.hutool.core.exceptions.ValidateException;
 import cn.hutool.jwt.JWT;

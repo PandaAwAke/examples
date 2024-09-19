@@ -32,16 +32,5 @@ spring:
           uri: lb://pay-service
           predicates:
             - Path=/pay-orders/**
-
-hm:
-  jwt:    # JWT 秘钥相关
-    location: classpath:hmall.jks
-    alias: hmall
-    password: hmall123
-    tokenTTL: 30m
-  auth:   # 登录拦截
-    excludePaths:
-      - /search/**
-      - /users/login
-      - /items/**
-      - /hi
+  config:
+    import: classpath:common.yaml
