@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: gateway
+  profiles:
+    active: dev
+
+  cloud:
+    nacos:
+      server-addr: localhost:8848
+      config:
+        file-extension: yaml
+        shared-configs:
+          - dataId: shared-jdbc.yaml
+          - dataId: shared-log.yaml
+          - dataId: shared-openfeign.yaml
+  config:
+    import:
+      - nacos:nacos-config-example.properties?refresh=true

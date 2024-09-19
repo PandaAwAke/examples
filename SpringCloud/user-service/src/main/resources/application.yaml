@@ -2,44 +2,5 @@ server:
   port: 8130
 
 spring:
-  application:
-    name: user-service
-  profiles:
-    active: dev
-  datasource:
-    url: jdbc:mysql://${hm.db.host}:3306/hm-user?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&serverTimezone=Asia/Shanghai
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    username: root
-    password: ${hm.db.pw}
-
-  cloud:
-    nacos:
-      discovery:
-        server-addr: localhost:8848
-    openfeign:
-      okhttp:
-        enabled: true
-
   config:
-    import: classpath:common.yaml
-
-mybatis-plus:
-  configuration:
-    default-enum-type-handler: com.baomidou.mybatisplus.core.handlers.MybatisEnumTypeHandler
-  global-config:
-    db-config:
-      update-strategy: not_null
-      id-type: auto
-
-logging:
-  level:
-    com.pandaawake: debug
-  pattern:
-    dateformat: HH:mm:ss:SSS
-  file:
-    path: "logs/${spring.application.name}"
-
-knife4j:
-  enable: true
-  setting:
-    language: zh_cn
+    import: classpath:jwt.yaml

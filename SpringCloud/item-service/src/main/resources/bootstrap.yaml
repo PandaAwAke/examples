@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: item-service
+  profiles:
+    active: dev
+
+  cloud:
+    nacos:
+      server-addr: localhost:8848
+      config:
+        file-extension: yaml
+        shared-configs:
+          - dataId: shared-jdbc.yaml
+          - dataId: shared-log.yaml
+          - dataId: shared-swagger.yaml
+          - dataId: shared-openfeign.yaml
+  config:
+    import:
+      - nacos:nacos-config-example.properties?refresh=true

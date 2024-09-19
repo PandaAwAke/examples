@@ -2,13 +2,7 @@ server:
   port: 8080
 
 spring:
-  application:
-    name: gateway
-
   cloud:
-    nacos:
-      discovery:
-        server-addr: localhost:8848
     gateway:
       enabled: true
       routes:
@@ -32,5 +26,6 @@ spring:
           uri: lb://pay-service
           predicates:
             - Path=/pay-orders/**
+
   config:
-    import: classpath:common.yaml
+    import: classpath:jwt.yaml

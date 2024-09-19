@@ -1,4 +1,6 @@
 hm:
   db:
+    name: hm-pay
     host: localhost
     pw: 123456
+    port: 3306

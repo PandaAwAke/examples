@@ -10,6 +10,8 @@ services:
     volumes:
       - E:\workspace\mysql\data:/var/lib/mysql
       - E:\workspace\mysql\log:/var/log/mysql
+#      - ./mysql/data:/var/lib/mysql
+#      - ./mysql/log:/var/log/mysql
     environment:
       MYSQL_ROOT_PASSWORD: 123456
     networks:
