@@ -29,6 +29,17 @@ services:
     networks:
       - my-net
 
+  sentinel:
+    image: sentinel-dashboard:1.8.8
+    build:
+      context: ./sentinel
+      dockerfile: Dockerfile
+    ports:
+      - "9000:8080"
+    restart: always
+    networks:
+      - my-net
+
   nginx:
     image: nginx:1.27-alpine-slim
     container_name: nginx
@@ -40,9 +51,10 @@ services:
     volumes:
       - ./nginx/conf/nginx.conf:/etc/nginx/nginx.conf:ro
       - ./nginx/html:/usr/share/nginx/html
+
+    # 下面的配置是给 nginx 将请求转发到宿主机用的，容器内使用 http://host.docker.internal 即可访问宿主机
     extra_hosts:
       - "host.docker.internal:host-gateway"
-
 
 networks:
   my-net:
