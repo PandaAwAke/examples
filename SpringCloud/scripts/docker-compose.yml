@@ -30,13 +30,26 @@ services:
       - my-net
 
   sentinel:
-    image: sentinel-dashboard:1.8.8
     build:
       context: ./sentinel
       dockerfile: Dockerfile
+    image: sentinel-dashboard:1.8.8
     ports:
       - "9000:8080"
     restart: always
+    networks:
+      - my-net
+
+  seata:
+    build:
+      context: ./seata
+      dockerfile: Dockerfile
+    image: seata-server:2.0.0
+    ports:
+      - "7099:7099"
+      - "8099:8099"
+    restart: always
+    privileged: true
     networks:
       - my-net
 
