@@ -15,6 +15,7 @@ spring:
           - dataId: shared-swagger.yaml
           - dataId: shared-openfeign.yaml
           - dataId: shared-sentinel.yaml
+          - dataId: shared-seata.yaml
   config:
     import:
       - nacos:nacos-config-example.properties?refresh=true

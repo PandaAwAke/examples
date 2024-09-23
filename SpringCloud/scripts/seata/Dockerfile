@@ -15,7 +15,7 @@ RUN apt update && apt install -y curl && \
     rm -rf "/seata-server/conf/" "/seata-server/logs/" && \
     rm "/seata-server.tar.gz"
 
-ADD "./seata-conf.tar.gz" "/seata-server/conf/"
+COPY "./conf" "/seata-server/conf"
 
 ENV LOADER_PATH="/seata-server/lib"
 ENV TZ="Asia/Shanghai"
