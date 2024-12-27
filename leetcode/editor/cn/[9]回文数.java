@@ -102,10 +102,5 @@ class Solution {
 //
 //        return x == revertedNumber || x == revertedNumber / 10;
     }
-
-    public static void main(String[] args) {
-        Solution solution = new Solution();
-        System.out.println(solution.isPalindrome(121));
-    }
 }
 //leetcode submit region end(Prohibit modification and deletion)
