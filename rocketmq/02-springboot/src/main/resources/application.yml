@@ -1,0 +1,9 @@
+server:
+  port: 9000
+
+rocketmq:
+  name-server: localhost:9876
+  producer:
+    group: SpringBootProducerGroup  # 必须配，否则不初始化 RocketMQTemplate
+  consumer:
+    group: SpringBootConsumerGroup  # 可以不在这里配，可在消费者注解配

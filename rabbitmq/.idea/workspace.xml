@@ -4,23 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ea628711-01db-4174-b8f1-cbaf7240fddd" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/rabbitmq/MainApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/rabbitmq/config/MyApplicationListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/rabbitmq/event/MyEvent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/rabbitmq/rabbitmq/FirstConsumer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/rabbitmq/rabbitmq/FirstPublisher.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/rabbitmq/rabbitmq/SecondConsumer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/rabbitmq/rabbitmq/SecondPublisher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../leetcode/.idea/leetcode/editor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../leetcode/.idea/leetcode/editor.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../leetcode/.idea/leetcode/statistics.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../leetcode/.idea/leetcode/statistics.xml" afterDir="false" />
+    <list default="true" id="ea628711-01db-4174-b8f1-cbaf7240fddd" name="更改" comment="basic RabbitMQ">
+      <change afterPath="$PROJECT_DIR$/rabbitmq-basic/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rabbitmq-springboot/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rabbitmq-springboot/src/main/java/org/example/rabbitmq/MainApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rabbitmq-springboot/src/main/java/org/example/rabbitmq/config/FanoutConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rabbitmq-springboot/src/main/java/org/example/rabbitmq/config/consumer/Consumer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rabbitmq-springboot/src/main/java/org/example/rabbitmq/config/producer/ProducerController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rabbitmq-springboot/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringMVC/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../SpringMVC/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/rabbitmq/MainApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/rabbitmq/config/MyApplicationListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/rabbitmq-basic/src/main/java/org/example/rabbitmq/config/MyApplicationListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/rabbitmq/event/MyEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/rabbitmq-basic/src/main/java/org/example/rabbitmq/event/MyEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/rabbitmq/rabbitmq/FirstConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/rabbitmq-basic/src/main/java/org/example/rabbitmq/rabbitmq/FirstConsumer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/rabbitmq/rabbitmq/FirstPublisher.java" beforeDir="false" afterPath="$PROJECT_DIR$/rabbitmq-basic/src/main/java/org/example/rabbitmq/rabbitmq/FirstPublisher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/rabbitmq/rabbitmq/SecondConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/rabbitmq-basic/src/main/java/org/example/rabbitmq/rabbitmq/SecondConsumer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/rabbitmq/rabbitmq/SecondPublisher.java" beforeDir="false" afterPath="$PROJECT_DIR$/rabbitmq-basic/src/main/java/org/example/rabbitmq/rabbitmq/SecondPublisher.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,87 +51,42 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "Spring Boot.MainApplication.executor": "Run",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "模块",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "editor.preferences.import",
-    "vue.rearranger.settings.migration": "true",
-    "应用程序.FirstConsumer.executor": "Run",
-    "应用程序.FirstPublisher.executor": "Run",
-    "应用程序.SecondConsumer.executor": "Run",
-    "应用程序.SecondPublisher.executor": "Run"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;Spring Boot.MainApplication (1).executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.MainApplication.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;模块&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.import&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;,
+    &quot;应用程序.FirstConsumer.executor&quot;: &quot;Run&quot;,
+    &quot;应用程序.FirstPublisher.executor&quot;: &quot;Run&quot;,
+    &quot;应用程序.SecondConsumer.executor&quot;: &quot;Run&quot;,
+    &quot;应用程序.SecondPublisher.executor&quot;: &quot;Run&quot;
   }
-}]]></component>
-  <component name="RunManager" selected="应用程序.SecondPublisher">
-    <configuration name="FirstConsumer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.example.rabbitmq.rabbitmq.FirstConsumer" />
-      <module name="rabbitmq" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.rabbitmq.rabbitmq.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="FirstPublisher" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.example.rabbitmq.rabbitmq.FirstPublisher" />
-      <module name="rabbitmq" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.rabbitmq.rabbitmq.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SecondConsumer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.example.rabbitmq.rabbitmq.SecondConsumer" />
-      <module name="rabbitmq" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.rabbitmq.rabbitmq.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SecondPublisher" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.example.rabbitmq.rabbitmq.SecondPublisher" />
-      <module name="rabbitmq" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.rabbitmq.rabbitmq.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\dev\examples\rabbitmq\rabbitmq-basic\src\main\java" />
+      <recent name="E:\dev\examples\rabbitmq\rabbitmq-basic\src\main" />
+    </key>
+  </component>
+  <component name="RunManager">
     <configuration name="MainApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="rabbitmq" />
+      <module name="rabbitmq-springboot" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="org.example.rabbitmq.MainApplication" />
       <extension name="coverage">
         <pattern>
@@ -143,10 +100,6 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="应用程序.SecondPublisher" />
-        <item itemvalue="应用程序.SecondConsumer" />
-        <item itemvalue="应用程序.FirstConsumer" />
-        <item itemvalue="应用程序.FirstPublisher" />
         <item itemvalue="Spring Boot.MainApplication" />
       </list>
     </recent_temporary>
@@ -170,7 +123,18 @@
       <workItem from="1736070091305" duration="563000" />
       <workItem from="1736086926090" duration="3571000" />
       <workItem from="1736127821512" duration="7577000" />
+      <workItem from="1736217466185" duration="4002000" />
+      <workItem from="1736225520135" duration="17000" />
     </task>
+    <task id="LOCAL-00001" summary="basic RabbitMQ">
+      <option name="closed" value="true" />
+      <created>1736217548766</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1736217548766</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -180,5 +144,7 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
+    <MESSAGE value="basic RabbitMQ" />
+    <option name="LAST_COMMIT_MESSAGE" value="basic RabbitMQ" />
   </component>
 </project>

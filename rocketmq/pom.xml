@@ -5,12 +5,12 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.pandaawake</groupId>
-    <artifactId>rabbitmq</artifactId>
+    <artifactId>rocketmq</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
     <modules>
-        <module>rabbitmq-springboot</module>
-        <module>rabbitmq-basic</module>
+        <module>01-quickstart</module>
+        <module>02-springboot</module>
     </modules>
 
     <parent>
@@ -31,6 +31,5 @@
             <artifactId>lombok</artifactId>
         </dependency>
     </dependencies>
-
 
 </project>
